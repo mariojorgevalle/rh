@@ -8,33 +8,40 @@ from rh.servidor.forms import FormServidor
 
 class ServidorHandler(BaseHandler):
     allowed_methods = ("GET", "POST", "DELETE", "PUT")
-    model = Servidor
+    model = Servidor.objects
 
     def read(self, request, servidor_id=None):
-#        import pdb; pdb.set_trace()
         if servidor_id:
-            return Servidor.objects.get(pk=servidor_id)
+            return self.model.get(pk=servidor_id)
         else:
-            return Servidor.objects.all()
+            return self.model.all()
 
-#    @validate(ServidorForm)
     def create(self, request, **kwargs):
-#        import pdb; pdb.set_trace()
-#        if request.post:
-#            data = request.data
-#            
-#            em = self.model(nome=data['nome'], user=data['user'], email=data['email'])
-#            em.save()
-#            
-#            return rc.CREATED
-#        else:
-#            super(ExpressiveTestModel, self).create(request)
-        pass
+        if request.post:
+            data = request.data
+            
+            novo_servidor = self.model(nome=data['nome'], user=data['user'], email=data['email'])
+            novo_servidor.save()
+            
+            return rc.CREATED
+        return "ERRO!"
 
-    def delete(self, resquest, id):
-        pass
+    def delete(self, request):
+        data = request.data
+        
+        servidor = self.model.get(pk=data['servidor_id'])
+        servidor.delete()
 
-#    @validate(FormServidor, "PUT")
+        return "APAGADO"
+
     def update(self, request):
-#        import pdb; pdb.set_trace()
-        pass
+        data = request.data
+        
+        servidor = self.model.get(pk=data['servidor_id'])
+        servidor.nome=data['nome']
+        servidor.user=data['user']
+        servidor.email=data['email']
+        servidor.save()
+        
+        return "ATUALIZADO"
+
