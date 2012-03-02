@@ -12,3 +12,13 @@ Projeto desenvolvido em Django, utilizando Piston e RESTfulie como ferramentas p
 
 * Funcionalidades
 Atualmente já está implementados os métodos GET e PUT. Os próximos passos serão implementar os métodos POST e DELETE.
+
+* Para utilizar:
+- Faça o download do projeto (.zip ou .tar.gz) pelo GitHub.
+- Descompacte.
+- Renomeie a pasta para "rh".
+- Execute o comando "sudo chmod +x install.sh".
+- Execute o comando "sudo ./install.sh".
+- Confirme a instalação de pacotes quando solicitado.
+- Crie o "superuser" quando for solicitado.
+- Acesse "http://localhost:8080/".
