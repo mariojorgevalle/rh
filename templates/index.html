@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns= "http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+    <head>
+        <title>
+            {% block nome %}Recursos Humanos{% endblock %}
+        </title>
+    </head>
+
+    <body>
+
+    <h2>Serviços providos pelo módulo RH.</h2>
+
+    <ul>
+        <li><h4>Cadastrar novo servidor. <a href="/api/servidor/">URL</a></h4></li>
+        <p>Passar os dados do novo servidor através do método POST.</br><br/>
+        Exemplo:<br/>
+        curl -u usuario:senha -H 'Content-Type:application/json' -X POST -d '{"servidor_id": "1", "nome": "nome", "user": "user", "email": "email"}' http://127.0.0.1:8000/api/servidor/</p>
+        <li><h4>Listar todos os servidores. <a href="/api/servidores/json/">URL</a></h4></li>
+        <p>Lista todos os servidores atualmente cadastrados.</br><br/>
+        Exemplo:<br/>
+        curl -u usuario:senha -H 'Content-Type:application/json' -X GET http://127.0.0.1:8000/api/servidores/json/</p>
+        <li><h4>Pesquisar servidor a partir de matrícula. <a href="/api/servidor/id/json/">URL</a></h4></li>
+        <p>Coloque a matrícula (id) do servidor que deseja pesquisar na URL.</br><br/>
+        Exemplo:<br/>
+        curl -u usuario:senha -H 'Content-Type:application/json' -X GET http://127.0.0.1:8000/api/servidor/1/json/</p>
+        <li><h4>Alterar servidor. <a href="/api/servidor/">URL</a></h4></li>
+        <p>Passar os dados do novo servidor através do método PUT.</br><br/>
+        Exemplo:<br/>
+        curl -u usuario:senha -H 'Content-Type:application/json' -X PUT -d '{"servidor_id": "1", "nome": "nome", "user": "user", "email": "email"}' http://127.0.0.1:8000/api/servidor/</p>
+        <li><h4>Excluir servidor. <a href="/api/servidor/">URL</a></h4></li>
+        <p>Coloque a matrícula (id) do servidor que deseja excluir na URL.</br><br/>
+        Exemplo:<br/>
+        curl -u usuario:senha -H 'Content-Type:application/json' -X DELETE -d '{"servidor_id": "1"}' http://127.0.0.1:8000/api/servidor/</p>
+    </ul>
+
+    </body>
+
+</html>
