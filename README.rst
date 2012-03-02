@@ -1,5 +1,5 @@
 Projeto para P2
-+++++++++++++++
+---------------
 
 * Instituto Federal Fluminense
 * Sistemas de Informação - 7º Período
