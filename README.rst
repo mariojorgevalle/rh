@@ -1,11 +1,14 @@
 Projeto para P2
 +++++++++++++++
 
-* Instituto Federal Fluminense
-* Sistemas de Informação - 7º Período
-* Matéria: Tópicos Avançados
-* Alunos: Mario Jorge Valle do Amaral e Rebeca Campos Motta
-* Trabalho: Serviço para gestão de Recursos Humanos do IFF
+- Instituto Federal Fluminense
+- Sistemas de Informação - 7º Período
+- Matéria: 
+	Tópicos Avançados
+- Alunos: 
+	Mario Jorge Valle do Amaral e Rebeca Campos Motta
+- Trabalho: 
+	Serviço para gestão de Recursos Humanos do IFF
 
 Informações
 -----------
@@ -26,8 +29,9 @@ Para utilizar
 
 	sudo chmod +x install.sh
 - Execute o comando::
+
 	sudo ./install.sh
 - Confirme a instalação de pacotes quando solicitado.
 - Crie o "superuser" quando for solicitado.
-- Acesse::
+- Acesse:
 	http://localhost:8080/
