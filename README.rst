@@ -22,8 +22,12 @@ Para utilizar
 - Faça o download do projeto (.zip ou .tar.gz) pelo GitHub.
 - Descompacte.
 - Renomeie a pasta para "rh".
-- Execute o comando "sudo chmod +x install.sh".
-- Execute o comando "./install.sh".
+- Execute o comando::
+
+	sudo chmod +x install.sh
+- Execute o comando::
+	sudo ./install.sh
 - Confirme a instalação de pacotes quando solicitado.
 - Crie o "superuser" quando for solicitado.
-- Acesse "http://localhost:8080/".
+- Acesse::
+	http://localhost:8080/
