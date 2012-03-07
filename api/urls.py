@@ -14,6 +14,5 @@ urlpatterns = patterns('',
 #    url(r'^servidor/$', servidor_handler, { 'emitter_format': 'json' }),
     url(r'^servidor/(?P<servidor_id>.+)/(?P<emitter_format>.+)/$', servidor_handler),
     url(r'^servidor/$', servidor_handler),
-    url(r'^servidor/$', servidor_handler),
-    url(r'^servidor/$', servidor_handler),
+    url(r'^servidor/(?P<servidor_id>.+)/$', servidor_handler),
 )

@@ -26,10 +26,9 @@ class ServidorHandler(BaseHandler):
             return rc.CREATED
         return "ERRO!"
 
-    def delete(self, request):
-        data = request.data
+    def delete(self, request, servidor_id=None):
         
-        servidor = self.model.get(pk=data['servidor_id'])
+        servidor = self.model.get(pk=servidor_id)
         servidor.delete()
 
         return "APAGADO"
