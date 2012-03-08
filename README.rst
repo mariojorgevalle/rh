@@ -35,3 +35,12 @@ Para utilizar
 - Crie o "superuser" quando for solicitado.
 - Acesse:
 	http://localhost:8080/
+
+Habilitando POST
+----------------
+
+- Abra o arquivo /var/lib/python-support/python2.7/piston/resource.py com sudo.
+- Adicione na linha 34 entre "self.handler = handler() ... if not"::
+
+    self.csrf_exempt = getattr(self.handler, 'csrf_exempt', True)
+- Reinicie o sevidor Django.
