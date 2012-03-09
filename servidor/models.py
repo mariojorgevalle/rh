@@ -9,3 +9,6 @@ class Servidor(models.Model):
 
     def __unicode__(self):
         return self.nome
+
+class Setor(models.Model):
+    nome = models.CharField(max_length=50)

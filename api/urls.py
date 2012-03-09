@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 from piston.resource import Resource
-from rh.api.handlers import ServidorHandler, ConsultaTurmasHandler
+from rh.api.handlers import ServidorHandler, ConsultaTurmasHandler, SetorHandler
 
 class CsrfExemptResource( Resource ):
 	def __init__( self, handler, authentication = None ):
@@ -9,6 +9,7 @@ class CsrfExemptResource( Resource ):
 
 servidor_handler = Resource(ServidorHandler)
 turmas_handler = Resource(ConsultaTurmasHandler)
+setor_handler = Resource(SetorHandler)
 
 urlpatterns = patterns('',
     url(r'^servidores/(?P<emitter_format>.+)/$', servidor_handler),
@@ -17,4 +18,6 @@ urlpatterns = patterns('',
     url(r'^servidor/$', servidor_handler),
     url(r'^servidor/(?P<servidor_id>.+)/$', servidor_handler),
     url(r'^turmas_professor/(?P<servidor_id>.+)/$', turmas_handler),
+    url(r'^setor/(?P<setor_id>.+)/(?P<emitter_format>.+)/$', setor_handler),
+    url(r'^setor/(?P<emitter_format>.+)/$', setor_handler),
 )
