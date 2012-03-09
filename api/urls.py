@@ -19,5 +19,6 @@ urlpatterns = patterns('',
     url(r'^servidor/(?P<servidor_id>.+)/$', servidor_handler),
     url(r'^turmas_professor/(?P<servidor_id>.+)/$', turmas_handler),
     url(r'^setor/(?P<setor_id>.+)/(?P<emitter_format>.+)/$', setor_handler),
-    url(r'^setor/(?P<emitter_format>.+)/$', setor_handler),
+    url(r'^setor/$', setor_handler),
+    url(r'^setores/(?P<emitter_format>.+)/$', setor_handler),
 )

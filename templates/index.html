@@ -20,7 +20,7 @@
         <p>Lista todos os servidores atualmente cadastrados.</br><br/>
         Exemplo:<br/>
         curl -u usuario:senha -H 'Content-Type:application/json' -X GET http://127.0.0.1:8000/api/servidores/json/</p>
-        <li><h4>Pesquisar servidor a partir de matrícula. <a href="/api/servidor/id/json/">URL</a></h4></li>
+        <li><h4>Pesquisar servidor a partir de matrícula. <a href="/api/servidor/1/json/">URL</a></h4></li>
         <p>Coloque a matrícula (id) do servidor que deseja pesquisar na URL.</br><br/>
         Exemplo:<br/>
         curl -u usuario:senha -H 'Content-Type:application/json' -X GET http://127.0.0.1:8000/api/servidor/1/json/</p>
@@ -36,6 +36,19 @@
         <p>Coloque a matrícula (id) do servidor que deseja buscar as turmas na URL.</br><br/>
         Exemplo:<br/>
         curl -u usuario:senha -H 'Content-Type:application/json' -X GET http://127.0.0.1:8000/api/turmas_professor/1/</p>
+
+        <li><h4>Cadastrar novo setor. <a href="/api/setor/">URL</a></h4></li>
+        <p>Passar os dados do novo setor através do método POST.</br><br/>
+        Exemplo:<br/>
+        curl -u usuario:senha -H 'Content-Type:application/json' -X POST -d '{"nome": "nome"}' http://127.0.0.1:8000/api/setor/</p>
+        <li><h4>Listar todos os setores. <a href="/api/setores/json/">URL</a></h4></li>
+        <p>Lista todos os setores atualmente cadastrados.</br><br/>
+        Exemplo:<br/>
+        curl -u usuario:senha -H 'Content-Type:application/json' -X GET http://127.0.0.1:8000/api/setores/json/</p>
+        <li><h4>Pesquisar setor a partir de id. <a href="/api/setor/1/json/">URL</a></h4></li>
+        <p>Coloque o id do setor que deseja pesquisar na URL.</br><br/>
+        Exemplo:<br/>
+        curl -u usuario:senha -H 'Content-Type:application/json' -X GET http://127.0.0.1:8000/api/setor/1/json/</p>
     </ul>
 
     </body>
