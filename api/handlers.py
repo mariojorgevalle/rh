@@ -7,6 +7,9 @@ from piston.utils import rc
 from rh.servidor.models import Servidor
 from rh.servidor.forms import FormServidor
 
+import urllib2
+import json
+
 class ServidorHandler(BaseHandler):
     allowed_methods = ("GET", "POST", "DELETE", "PUT")
     model = Servidor.objects
@@ -41,3 +44,12 @@ class ServidorHandler(BaseHandler):
         
         return rc.ALL_OK
 
+class ConsultaTurmasHandler(BaseHandler):
+    allowed_methods = ("GET")
+
+    def read(self, request, servidor_id=None):
+        url = 'http://10.12.10.105:3000/turmas/' + str(servidor_id)
+        data = urllib2.urlopen(url)
+        turmas = json.load(data)
+        
+        return turmas
